@@ -3,5 +3,6 @@ function setup() {
 }
 
 function draw() {
-    background(220);
+    background("green");
+    console.log("Suntem in consola.");
 }
