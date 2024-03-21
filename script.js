@@ -25,6 +25,11 @@ function Bdraw() {
     // mouth
     stroke("red");
     arc(600, 210, 20, 10, 0, Math.PI);
+    // cheeks
+    fill("pink")
+    stroke("pink")
+    circle(580, 200, 7);
+    circle(620, 200, 7);
 }
 
 
