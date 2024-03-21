@@ -6,6 +6,7 @@ function draw() {
     background("green");
     Edraw();
     Bdraw();
+    Gdraw();
 }
 
 function Bdraw() {
@@ -53,4 +54,29 @@ function Edraw() {
     // mouth
     stroke("pink");
     arc(200, 210, 70, 30, 0, Math.PI);
+}
+
+function Gdraw() {
+    // face
+    fill("gray");
+    stroke("white");
+    circle(1000, 200, 100);
+    // eyes
+    fill("yellow");
+    stroke("black");
+    circle(990, 190, 50);
+    fill("white");
+    stroke("blue");    
+    circle(990, 190, 10);
+    stroke("black");
+    circle(1010, 190, 50);
+    stroke("blue");
+    circle(1010, 190, 10);
+    // mouth
+    stroke("pink");
+    arc(1000, 210, 70, 30, 0, Math.PI);
+    // cheeks
+    fill("red");
+    circle(210, 205, 7);
+    circle(190, 205, 7);
 }
