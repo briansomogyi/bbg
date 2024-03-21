@@ -4,5 +4,5 @@ function setup() {
 
 function draw() {
     background("green");
-    console.log("Suntem in consola.");
+    circle(200, 200, 50);
 }
