@@ -17,4 +17,7 @@ function draw() {
     circle(210, 190, 5);
     stroke("blue");
     circle(210, 190, 1);
+    // mouth
+    stroke("red");
+    arc(200, 210, 20, 10, 0, Math.PI);
 }
