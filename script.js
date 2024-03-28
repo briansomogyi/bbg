@@ -76,7 +76,7 @@ function Gdraw(x, y) {
     circle(x + 20, y - 20, 10);
     // mouth
     stroke("pink");
-    fill("black");
+    fill("white");
     arc(x, y + 20, 70, 30, 0, Math.PI);
     // cheeks
     fill("red");
