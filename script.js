@@ -1,5 +1,10 @@
-let tableWidth = 1200
-let tableHeight = 400
+let tableWidth = 1200;
+let tableHeight = 400;
+
+let xBdraw = 600;
+let yBdraw = 200;
+
+let xDirection = 1;
 
 let smGiuliaX = 1000
 let smGiuliY = 200
@@ -13,9 +18,17 @@ function setup() {
 function draw() {
     background("green");
     Edraw(200, 200);
-    Bdraw(600, 200);
+    checkLimitsBdraw();
+    Bdraw(xBdraw, yBdraw);
     checkLimitsmGiulia();
     Gdraw(smGiuliaX, 200);
+}
+
+function checkLimitsBdraw() {
+    if (xBdraw >= tableWidth) {
+        xDirection *= -1;
+    }
+    xBdraw += xDirection;
 }
 
 function checkLimitsmGiulia() {
