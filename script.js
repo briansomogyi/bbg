@@ -4,7 +4,7 @@ function setup() {
 
 function draw() {
     background("green");
-    Edraw();
+    Edraw(200, 200);
     Bdraw(600, 200);
     Gdraw(1000, 200);
 }
