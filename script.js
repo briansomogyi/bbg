@@ -34,26 +34,26 @@ function Bdraw(x, y) {
 }
 
 
-function Edraw() {
+function Edraw(x, y) {
     // face
     fill("yellow");
     stroke("black");
-    circle(200, 200, 200);
+    circle(x, y, 200);
     // eyes
     fill("white");
     stroke("black");
-    circle(150, 150, 50);
+    circle(x-50, y-50, 50);
     fill("white");
     stroke("blue");
 
-    circle(150, 150, 10);
+    circle(x-50, y-50, 10);
     stroke("black");
-    circle(200, 150, 50);
+    circle(x, y-50, 50);
     stroke("blue");
-    circle(200, 150, 10);
+    circle(x, y-50, 10);
     // mouth
     stroke("pink");
-    arc(200, 210, 70, 30, 0, Math.PI);
+    arc(x, y+10, 70, 30, 0, Math.PI);
 }
 
 function Gdraw(x, y) {
