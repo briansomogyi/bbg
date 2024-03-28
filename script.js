@@ -64,12 +64,14 @@ function Gdraw() {
     // eyes
     fill("yellow");
     stroke("black");
-    circle(990, 190, 50);
+    circle(990, 190, 20);
     fill("white");
     stroke("blue");    
     circle(990, 190, 10);
+    fill ("yellow");
     stroke("black");
-    circle(1010, 190, 50);
+    circle(1010, 190, 20);
+    fill("white");
     stroke("blue");
     circle(1010, 190, 10);
     // mouth
