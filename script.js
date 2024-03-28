@@ -6,7 +6,7 @@ function draw() {
     background("green");
     Edraw();
     Bdraw();
-    Gdraw();
+    Gdraw(1000, 200);
 }
 
 function Bdraw() {
@@ -45,7 +45,7 @@ function Edraw() {
     circle(150, 150, 50);
     fill("white");
     stroke("blue");
-    
+
     circle(150, 150, 10);
     stroke("black");
     circle(200, 150, 50);
@@ -56,29 +56,30 @@ function Edraw() {
     arc(200, 210, 70, 30, 0, Math.PI);
 }
 
-function Gdraw() {
+function Gdraw(x, y) {
     // face
     fill("gray");
     stroke("white");
-    circle(1000, 200, 100);
+    circle(x, y, 100);
     // eyes
     fill("yellow");
     stroke("black");
-    circle(990, 190, 20);
-    fill("white");
-    stroke("blue");    
-    circle(990, 190, 10);
-    fill ("yellow");
-    stroke("black");
-    circle(1010, 190, 20);
+    circle(x - 20, y - 20, 20);
     fill("white");
     stroke("blue");
-    circle(1010, 190, 10);
+    circle(x - 20, y - 20, 10);
+    fill("yellow");
+    stroke("black");
+    circle(x + 20, y - 20, 20);
+    fill("white");
+    stroke("blue");
+    circle(x + 20, y - 20, 10);
     // mouth
     stroke("pink");
-    arc(1000, 210, 70, 30, 0, Math.PI);
+    fill("black");
+    arc(x, y + 20, 70, 30, 0, Math.PI);
     // cheeks
     fill("red");
-    circle(1010, 205, 7);
-    circle(990, 205, 7);
+    circle(x + 30, y + 5, 7);
+    circle(x - 30, y + 5, 7);
 }
