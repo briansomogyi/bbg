@@ -1,3 +1,11 @@
+let tableWidth = 1200
+let tableHeight = 400
+
+let smGiuliaX = 1000
+let smGiuliY = 200
+
+let directionX = 1;
+
 function setup() {
     createCanvas(1200, 400);
 }
@@ -6,7 +14,15 @@ function draw() {
     background("green");
     Edraw(200, 200);
     Bdraw(600, 200);
-    Gdraw(1000, 200);
+    checkLimitsmGiulia();
+    Gdraw(smGiuliaX, 200);
+}
+
+function checkLimitsmGiulia() {
+    if (smGiuliaX >= tableWidth) {
+        directionX *= -1;
+    }
+    smGiuliaX += directionX;
 }
 
 function Bdraw(x, y) {
@@ -42,18 +58,18 @@ function Edraw(x, y) {
     // eyes
     fill("white");
     stroke("black");
-    circle(x-50, y-50, 50);
+    circle(x - 50, y - 50, 50);
     fill("white");
     stroke("blue");
 
-    circle(x-50, y-50, 10);
+    circle(x - 50, y - 50, 10);
     stroke("black");
-    circle(x, y-50, 50);
+    circle(x, y - 50, 50);
     stroke("blue");
-    circle(x, y-50, 10);
+    circle(x, y - 50, 10);
     // mouth
     stroke("pink");
-    arc(x, y+10, 70, 30, 0, Math.PI);
+    arc(x, y + 10, 70, 30, 0, Math.PI);
 }
 
 function Gdraw(x, y) {
