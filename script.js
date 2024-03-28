@@ -77,6 +77,6 @@ function Gdraw() {
     arc(1000, 210, 70, 30, 0, Math.PI);
     // cheeks
     fill("red");
-    circle(210, 205, 7);
-    circle(190, 205, 7);
+    circle(1010, 205, 7);
+    circle(990, 205, 7);
 }
