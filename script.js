@@ -5,32 +5,32 @@ function setup() {
 function draw() {
     background("green");
     Edraw();
-    Bdraw();
+    Bdraw(600, 200);
     Gdraw(1000, 200);
 }
 
-function Bdraw() {
+function Bdraw(x, y) {
     // face
     fill("white");
     stroke("black");
-    circle(600, 200, 50);
+    circle(x, y, 50);
     // eyes
     stroke("orange");
-    circle(590, 190, 5);
+    circle(x - 10, y - 10, 5);
     stroke("blue");
-    circle(590, 190, 1);
+    circle(x - 10, y - 10, 1);
     stroke("orange");
-    circle(610, 190, 5);
+    circle(x + 10, y - 10, 5);
     stroke("blue");
-    circle(610, 190, 1);
+    circle(x + 10, y - 10, 1);
     // mouth
     stroke("red");
-    arc(600, 210, 20, 10, 0, Math.PI);
+    arc(x, y + 10, 20, 10, 0, Math.PI);
     // cheeks
     fill("pink")
     stroke("pink")
-    circle(580, 200, 7);
-    circle(620, 200, 7);
+    circle(x - 20, y, 7);
+    circle(x + 20, y, 7);
 }
 
 
