@@ -7,7 +7,7 @@ let yBdraw = 200;
 let xDirection = 1;
 
 let smGiuliaX = 1000
-let smGiuliY = 200
+let smGiuliaY = 200
 
 let directionX = 1;
 
@@ -26,7 +26,7 @@ function draw() {
     checkLimitsBdraw();
     Bdraw(xBdraw, yBdraw);
     checkLimitsmGiulia();
-    Gdraw(smGiuliaX, 200);
+    Gdraw(smGiuliaX, smGiuliaY);
 }
 
 function checkLimitsBdraw() {
