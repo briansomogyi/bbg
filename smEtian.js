@@ -1,5 +1,5 @@
 const smEtian = {
-    ray: 25,
+    ray: 100,
     x: 200,
     y: 200,
     directionX: 1,
@@ -20,7 +20,7 @@ function checkLimitsEtian() {
     smEtian.y += smEtian.directionY * smEtian.speedY;
 }
 
-function smileyFaceEtian(x, y) {
+function smileyFaceEtian(x, y, ray) {
     // face
     fill("yellow");
     stroke("black");
