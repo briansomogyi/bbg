@@ -1,14 +1,21 @@
 const smGiulia = {
     x: 1000,
     y: 200,
-    direction: 1,
-    speed: 5,
+    directionX: 1,
+    directionY: 1,
+    speedX: 5,
+    speedY: 5,
 }
 function checkLimitsmGiulia() {
     if (smGiulia.x >= tableWidth || smGiulia.x <= 0) {
-        smGiulia.direction *= -1;
+        smGiulia.directionX *= -1;
     }
-    smGiulia.x += smGiulia.direction * smGiulia.speed;
+    smGiulia.x += smGiulia.directionX * smGiulia.speedX;
+    
+    if (smGiulia.y >= tableHeight || smGiulia.y <= 0) {
+        smGiulia.directionY *= -1;
+    }
+    smGiulia.y += smGiulia.directionY * smGiulia.speedY;
 }
 
 function smileyFaceGiulia(x, y) {
