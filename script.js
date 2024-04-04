@@ -39,7 +39,7 @@ function checkLimitsEtian() {
     if (xEtian >= tableWidth) {
         xDiretionEtian *= -1;
     }
-    xEtian  += xDiretionEtian;
+    xEtian += xDiretionEtian;
 }
 
 function checkLimitsmGiulia() {
