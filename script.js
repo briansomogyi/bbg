@@ -1,10 +1,9 @@
 let tableWidth = 1200;
 let tableHeight = 400;
 
-let xBdraw = 600;
-let yBdraw = 200;
-
-let xDirection = 1;
+let xBrian = 600;
+let yBrian = 200;
+let xDirectionBrian = 1;
 
 let smGiuliaX = 1000
 let smGiuliaY = 200
@@ -24,16 +23,16 @@ function draw() {
     checkLimitsEtian();
     Edraw(xEtian, yEtian);
     checkLimitsBdraw();
-    Bdraw(xBdraw, yBdraw);
+    Bdraw(xBrian, yBrian);
     checkLimitsmGiulia();
     Gdraw(smGiuliaX, smGiuliaY);
 }
 
 function checkLimitsBdraw() {
-    if (xBdraw >= tableWidth) {
-        xDirection *= -1;
+    if (xBrian >= tableWidth) {
+        xDirectionBrian *= -1;
     }
-    xBdraw += xDirection;
+    xBrian += xDirectionBrian;
 }
 
 
