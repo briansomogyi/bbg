@@ -4,9 +4,6 @@ const smEtian = {
     direction: 1,
 }
 
-checkLimitsEtian();
-    smileyFaceEtian(xEtian, yEtian);
-
 function checkLimitsEtian() {
     if (smEtian.x >= tableWidth || smEtian.x <= 0) {
         smEtian.direction *= -1;
