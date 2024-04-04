@@ -2,13 +2,14 @@ const smBrian = {
     x: 600,
     y: 200,
     direction: 1,
+    speed: 3,
 }
 
 function checkLimitsBrian() {
     if (smBrian.x >= tableWidth || smBrian.x <= 0) {
         smBrian.direction *= -1;
     }
-    smBrian.x += smBrian.direction;
+    smBrian.x += smBrian.direction * smBrian.speed;
 }
 
 
