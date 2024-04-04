@@ -5,7 +5,7 @@ const smBrian = {
 }
 
 function checkLimitsBrian() {
-    if (smBrian.x >= tableWidth) {
+    if (smBrian.x >= tableWidth || smBrian.x <= 0) {
         smBrian.direction *= -1;
     }
     smBrian.x += smBrian.direction;
