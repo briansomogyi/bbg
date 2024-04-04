@@ -2,7 +2,7 @@ const smBrian = {
     x: 600,
     y: 200,
     direction: 1,
-    speed: 3,
+    speed: 5,
 }
 
 function checkLimitsBrian() {
