@@ -1,4 +1,5 @@
 const smBrian = {
+    ray: 25,
     x: 600,
     y: 200,
     directionX: 1,
@@ -8,39 +9,40 @@ const smBrian = {
 }
 
 function checkLimitsBrian() {
-    if (smBrian.x >= tableWidth || smBrian.x <= 0) {
+    if (smBrian.x >= tableWidth - smBrian.ray || smBrian.x <= smBrian.ray) {
         smBrian.directionX *= -1;
     }
     smBrian.x += smBrian.directionX * smBrian.speedX;
-    if (smBrian.y >= tableHeight || smBrian.y <= 0) {
+
+    if (smBrian.y >= tableHeight - smBrian.ray || smBrian.y <= smBrian.ray) {
         smBrian.directionY *= -1;
     }
     smBrian.y += smBrian.directionY * smBrian.speedY;
 }
 
 
-function smileyFaceBrian(x, y) {
+function smileyFaceBrian(x, y, ray) {
     // face
     fill("white");
     stroke("black");
-    circle(x, y, 50);
+    circle(x, y, ray * 2);
     // eyes
     stroke("orange");
-    circle(x - 10, y - 10, 5);
+    circle(x - ray * 2 / 5, y - ray * 2 / 5, ray / 5);
     stroke("blue");
-    circle(x - 10, y - 10, 1);
+    circle(x - ray * 2 / 5, y - ray * 2 / 5, ray / 25);
     stroke("orange");
-    circle(x + 10, y - 10, 5);
+    circle(x + ray * 2 / 5, y - ray * 2 / 5, ray / 5);
     stroke("blue");
-    circle(x + 10, y - 10, 1);
+    circle(x + ray * 2 / 5, y - ray * 2 / 5, ray / 25);
     // mouth
     stroke("red");
-    arc(x, y + 10, 20, 10, 0, Math.PI);
+    arc(x, y + ray * 2 / 5, ray * 4 / 5, ray * 2 / 5, 0, Math.PI);
     // cheeks
     fill("pink")
     stroke("pink")
-    circle(x - 20, y, 7);
-    circle(x + 20, y, 7);
+    circle(x - ray * 4 / 5, y, ray / 5);
+    circle(x + ray * 4 / 5, y, ray / 5);
 }
 
 
