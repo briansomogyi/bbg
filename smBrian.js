@@ -1,16 +1,18 @@
-let xBrian = 600;
-let yBrian = 200;
-let xDirectionBrian = 1;
+const smBrian = {
+    x: 600,
+    y: 200,
+    direction: 1,
+}
 
 function checkLimitsBrian() {
-    if (xBrian >= tableWidth) {
-        xDirectionBrian *= -1;
+    if (smBrian.x >= tableWidth) {
+        smBrian.direction *= -1;
     }
-    xBrian += xDirectionBrian;
+    smBrian.x += smBrian.direction;
 }
 
 
-function smBrian(x, y) {
+function smileyFaceBrian(x, y) {
     // face
     fill("white");
     stroke("black");

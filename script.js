@@ -10,7 +10,7 @@ function draw() {
     checkLimitsEtian();
     smEtian(xEtian, yEtian);
     checkLimitsBrian();
-    smBrian(xBrian, yBrian);
+    smileyFaceBrian(smBrian.x, smBrian.y);
     checkLimitsmGiulia();
     smGiulia(xGiulia, yGiulia);
 }
