@@ -13,4 +13,5 @@ function draw() {
     smileyFaceBrian(smBrian.x, smBrian.y, smBrian.ray);
     checkLimitsmGiulia();
     smileyFaceGiulia(smGiulia.x, smGiulia.y, smGiulia.ray);
+    createPaddleBrian();
 }
