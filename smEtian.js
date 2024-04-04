@@ -1,18 +1,20 @@
-let xEtian = 200;
-let yEtian = 200;
-let xDiretionEtian = 1;
-
-checkLimitsEtian();
-    smEtian(xEtian, yEtian);
-
-function checkLimitsEtian() {
-    if (xEtian >= tableWidth) {
-        xDiretionEtian *= -1;
-    }
-    xEtian += xDiretionEtian;
+const smEtian = {
+    x: 200,
+    y: 200,
+    direction: 1,
 }
 
-function smEtian(x, y) {
+checkLimitsEtian();
+    smileyFaceEtian(xEtian, yEtian);
+
+function checkLimitsEtian() {
+    if (smEtian.x >= tableWidth) {
+        smEtian.diretion *= -1;
+    }
+    smEtian.x += smEtian.diretion;
+}
+
+function smileyFaceEtian(x, y) {
     // face
     fill("yellow");
     stroke("black");
