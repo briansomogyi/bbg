@@ -1,15 +1,16 @@
-let xGiulia = 1000
-let yGiulia = 200
-let xDirectionGiulia = 1;
-
+const smGiulia = {
+    x: 1000,
+    y: 200,
+    direction: 1,
+}
 function checkLimitsmGiulia() {
-    if (xGiulia >= tableWidth) {
-        xDirectionGiulia *= -1;
+    if (smGiulia.x >= tableWidth || smGiulia.y <= 0) {
+        smGiulia.direction *= -1;
     }
-    xGiulia += xDirectionGiulia;
+    smGiulia.x += smGiulia.direction;
 }
 
-function smGiulia(x, y) {
+function smileyFaceGiulia(x, y) {
     // face
     fill("gray");
     stroke("white");
