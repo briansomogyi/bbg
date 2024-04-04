@@ -4,7 +4,7 @@ const smGiulia = {
     direction: 1,
 }
 function checkLimitsmGiulia() {
-    if (smGiulia.x >= tableWidth || smGiulia.y <= 0) {
+    if (smGiulia.x >= tableWidth || smGiulia.x <= 0) {
         smGiulia.direction *= -1;
     }
     smGiulia.x += smGiulia.direction;
