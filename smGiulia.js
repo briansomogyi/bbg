@@ -1,4 +1,5 @@
 const smGiulia = {
+    ray: 50,
     x: 1000,
     y: 200,
     directionX: 1,
@@ -7,41 +8,41 @@ const smGiulia = {
     speedY: 5,
 }
 function checkLimitsmGiulia() {
-    if (smGiulia.x >= tableWidth || smGiulia.x <= 0) {
+    if (smGiulia.x >= tableWidth - smGiulia.ray || smGiulia.x <= smGiulia.ray) {
         smGiulia.directionX *= -1;
     }
     smGiulia.x += smGiulia.directionX * smGiulia.speedX;
-    
-    if (smGiulia.y >= tableHeight || smGiulia.y <= 0) {
+
+    if (smGiulia.y >= tableHeight - smGiulia.ray || smGiulia.y <= smGiulia.ray) {
         smGiulia.directionY *= -1;
     }
     smGiulia.y += smGiulia.directionY * smGiulia.speedY;
 }
 
-function smileyFaceGiulia(x, y) {
+function smileyFaceGiulia(x, y, ray) {
     // face
     fill("gray");
     stroke("white");
-    circle(x, y, 100);
+    circle(x, y, ray * 2);
     // eyes
     fill("yellow");
     stroke("black");
-    circle(x - 20, y - 20, 20);
+    circle(x - ray * 2 / 5, y - ray * 2 / 5, ray * 2 / 5);
     fill("white");
     stroke("blue");
-    circle(x - 20, y - 20, 10);
+    circle(x - ray * 2 / 5, y - ray * 2 / 5, ray / 5);
     fill("yellow");
     stroke("black");
-    circle(x + 20, y - 20, 20);
+    circle(x + ray * 2 / 5, y - ray * 2 / 5, ray * 2 / 5);
     fill("white");
     stroke("blue");
-    circle(x + 20, y - 20, 10);
+    circle(x + ray * 2 / 5, y - ray * 2 / 5, ray / 5);
     // mouth
     stroke("pink");
     fill("white");
-    arc(x, y + 20, 70, 30, 0, Math.PI);
+    arc(x, y + ray * 2 / 5, ray * 4 / 5, ray * 2 / 5, 0, Math.PI);
     // cheeks
     fill("red");
-    circle(x + 30, y + 5, 7);
-    circle(x - 30, y + 5, 7);
+    circle(x + ray * 4 / 5, y + ray / 10, ray / 5);
+    circle(x - ray * 4 / 5, y + ray / 10, ray / 5);
 }

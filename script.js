@@ -12,5 +12,5 @@ function draw() {
     checkLimitsBrian();
     smileyFaceBrian(smBrian.x, smBrian.y, smBrian.ray);
     checkLimitsmGiulia();
-    smileyFaceGiulia(smGiulia.x, smGiulia.y);
+    smileyFaceGiulia(smGiulia.x, smGiulia.y, smGiulia.ray);
 }
