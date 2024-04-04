@@ -11,13 +11,18 @@ let smGiuliY = 200
 
 let directionX = 1;
 
+let xEtian = 200;
+let yEtian = 200;
+let xDiretionEtian = 1;
+
 function setup() {
     createCanvas(1200, 400);
 }
 
 function draw() {
     background("green");
-    Edraw(200, 200);
+    checkLimitsEtian();
+    Edraw(xEtian, yEtian);
     checkLimitsBdraw();
     Bdraw(xBdraw, yBdraw);
     checkLimitsmGiulia();
@@ -29,6 +34,14 @@ function checkLimitsBdraw() {
         xDirection *= -1;
     }
     xBdraw += xDirection;
+}
+
+
+function checkLimitsEtian() {
+    if (xEtian >= tableWidth) {
+        xDiretionEtian *= -1;
+    }
+    xEtian  += xDiretionEtian;
 }
 
 function checkLimitsmGiulia() {
