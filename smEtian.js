@@ -1,4 +1,5 @@
 const smEtian = {
+    ray: 25,
     x: 200,
     y: 200,
     directionX: 1,
