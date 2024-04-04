@@ -8,7 +8,7 @@ function setup() {
 function draw() {
     background("green");
     checkLimitsEtian();
-    smileyFaceEtian(smEtian.x, smEtian.ys);
+    smileyFaceEtian(smEtian.x, smEtian.y);
     checkLimitsBrian();
     smileyFaceBrian(smBrian.x, smBrian.y);
     checkLimitsmGiulia();
