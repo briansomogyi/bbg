@@ -8,10 +8,10 @@ checkLimitsEtian();
     smileyFaceEtian(xEtian, yEtian);
 
 function checkLimitsEtian() {
-    if (smEtian.x >= tableWidth) {
-        smEtian.diretion *= -1;
+    if (smEtian.x >= tableWidth || smEtian.x <= 0) {
+        smEtian.direction *= -1;
     }
-    smEtian.x += smEtian.diretion;
+    smEtian.x += smEtian.direction;
 }
 
 function smileyFaceEtian(x, y) {
