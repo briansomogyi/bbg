@@ -2,13 +2,14 @@ const smEtian = {
     x: 200,
     y: 200,
     direction: 1,
+    speed: 5,
 }
 
 function checkLimitsEtian() {
     if (smEtian.x >= tableWidth || smEtian.x <= 0) {
         smEtian.direction *= -1;
     }
-    smEtian.x += smEtian.direction;
+    smEtian.x += smEtian.direction * smEtian.speed;
 }
 
 function smileyFaceEtian(x, y) {
