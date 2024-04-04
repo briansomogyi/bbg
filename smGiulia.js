@@ -2,12 +2,13 @@ const smGiulia = {
     x: 1000,
     y: 200,
     direction: 1,
+    speed:3
 }
 function checkLimitsmGiulia() {
     if (smGiulia.x >= tableWidth || smGiulia.x <= 0) {
         smGiulia.direction *= -1;
     }
-    smGiulia.x += smGiulia.direction;
+    smGiulia.x += smGiulia.direction*smGiulia.speed;
 }
 
 function smileyFaceGiulia(x, y) {
