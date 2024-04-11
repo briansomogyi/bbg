@@ -1,12 +1,13 @@
 const paddleBrian = {
-    x: 500,
+    x: 590,
     y: 550,
     color: "red",
-    width: 70,
-    height: 40,
+    width: 100,
+    height: 20,
 }
 
 function createPaddleBrian() {
     fill(paddleBrian.color);
-    rect(mouseX, mouseY, paddleBrian.width, paddleBrian.height);
+    paddleBrian.x = mouseX - paddleBrian.width/2;
+    rect(paddleBrian.x, paddleBrian.y, paddleBrian.width, paddleBrian.height);
 }
