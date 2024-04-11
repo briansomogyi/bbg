@@ -1,6 +1,6 @@
 const paddleBrian = {
     x: 500,
-    y: 300,
+    y: 350,
     color: "red",
     width: 70,
     height: 40,
