@@ -9,18 +9,19 @@ const smBrian = {
 }
 
 function checkLimitsBrian() {
-
+    // Verificam limitele de la stanga si de la dreapta
     if (smBrian.x >= tableWidth - smBrian.ray || smBrian.x <= smBrian.ray) {
         smBrian.directionX *= -1;
     }
     smBrian.x += smBrian.directionX * smBrian.speedX;
 
-
+    // Verificam limitele de sus si de jos
     if (smBrian.y >= tableHeight - smBrian.ray || smBrian.y <= smBrian.ray) {
         smBrian.directionY *= -1;
     }
     smBrian.y += smBrian.directionY * smBrian.speedY;
 
+    // Verificam coliziunea cu paleta
     if (smBrian.y >= paddleBrian.y - smBrian.ray && smBrian.x >= paddleBrian.x + smBrian.ray && smBrian.x <= paddleBrian.x + paddleBrian.width - smBrian.ray) {
         smBrian.directionY *= -1;
     }
