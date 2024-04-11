@@ -14,14 +14,17 @@ function checkLimitsmGiulia() {
     }
     smGiulia.x += smGiulia.directionX * smGiulia.speedX;
 
-    // Verificam limitele de sus si de jos
-    if (smGiulia.y >= tableHeight - smGiulia.ray || smGiulia.y <= smGiulia.ray) {
+    // Verificam limita de sus
+    if (smGiulia.y <= smGiulia.ray) {
         smGiulia.directionY *= -1;
     }
     smGiulia.y += smGiulia.directionY * smGiulia.speedY;
 
     // Verificam coliziunea cu paleta
-    if (smGiulia.y >= paddleGiulia.y - smGiulia.ray && smGiulia.x >= paddleGiulia.x + smGiulia.ray && smGiulia.x <= paddleGiulia.x + paddleGiulia.width - smGiulia.ray) {
+    if (smGiulia.y >= paddleGiulia.y - smGiulia.ray &&
+        smGiulia.y <= paddleGiulia.y + paddleGiulia.height &&
+        smGiulia.x >= paddleGiulia.x - smGiulia.ray &&
+        smGiulia.x <= paddleGiulia.x + paddleGiulia.width + smGiulia.ray) {
         smGiulia.directionY *= -1;
     }
     smGiulia.y += smGiulia.directionY * smGiulia.speedY;

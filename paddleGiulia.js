@@ -7,6 +7,6 @@ const paddleGiulia = {
 }
 function createPaddleGiulia() {
     fill(paddleGiulia.color);
+    paddleGiulia.x = mouseX - paddleGiulia.width/2;
     rect(paddleGiulia.x, paddleGiulia.y, paddleGiulia.width, paddleGiulia.height);
-
 }
