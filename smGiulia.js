@@ -8,12 +8,20 @@ const smGiulia = {
     speedY: 5,
 }
 function checkLimitsmGiulia() {
+    // Verificam limitele de la stanga si de la dreapta
     if (smGiulia.x >= tableWidth - smGiulia.ray || smGiulia.x <= smGiulia.ray) {
         smGiulia.directionX *= -1;
     }
     smGiulia.x += smGiulia.directionX * smGiulia.speedX;
 
+    // Verificam limitele de sus si de jos
     if (smGiulia.y >= tableHeight - smGiulia.ray || smGiulia.y <= smGiulia.ray) {
+        smGiulia.directionY *= -1;
+    }
+    smGiulia.y += smGiulia.directionY * smGiulia.speedY;
+
+    // Verificam coliziunea cu paleta
+    if (smGiulia.y >= paddleGiulia.y - smGiulia.ray && smGiulia.x >= paddleGiulia.x + smGiulia.ray && smGiulia.x <= paddleGiulia.x + paddleGiulia.width - smGiulia.ray) {
         smGiulia.directionY *= -1;
     }
     smGiulia.y += smGiulia.directionY * smGiulia.speedY;
