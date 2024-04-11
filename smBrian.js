@@ -16,7 +16,7 @@ function checkLimitsBrian() {
     smBrian.x += smBrian.directionX * smBrian.speedX;
 
     // Verificam limitele de sus si de jos si coliziunea cu paleta in aceeasi instructiune
-    if ((smBrian.y >= tableHeight - smBrian.ray || smBrian.y <= smBrian.ray) || (smBrian.y >= paddleBrian.y - smBrian.ray && smBrian.x >= paddleBrian.x + smBrian.ray && smBrian.x <= paddleBrian.x + paddleBrian.width - smBrian.ray)) {
+    if ((smBrian.y >= tableHeight - smBrian.ray || smBrian.y <= smBrian.ray) || (smBrian.y >= paddleBrian.y - smBrian.ray && smBrian.y <= paddleBrian.y + paddleBrian.height && smBrian.x >= paddleBrian.x - smBrian.ray && smBrian.x <= paddleBrian.x + paddleBrian.width)) {
         smBrian.directionY *= -1;
     }
     smBrian.y += smBrian.directionY * smBrian.speedY;
