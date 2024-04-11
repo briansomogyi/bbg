@@ -7,6 +7,7 @@ const paddleEtian = {
 }
 
 function createPaddleEtian() {
-    fill(paddleEtian.color);
+    fill(paddleEtian.color); 
+    paddleEtian.x = mouseX - paddleEtian.width/2;
     rect(paddleEtian.x, paddleEtian.y, paddleEtian.width, paddleEtian.height);
 }

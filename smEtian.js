@@ -8,13 +8,23 @@ const smEtian = {
     speedY: 7,
 }
 
-
 function checkLimitsEtian() {
-    if (smEtian.x >= tableWidth || smEtian.x <= 0) {
+    // Verificam limitele de la stanga si de la dreapta
+    if (smEtian.x >= tableWidth - smEtian.ray || smEtian.x <= smEtian.ray) {
         smEtian.directionX *= -1;
     }
     smEtian.x += smEtian.directionX * smEtian.speedX;
-    if (smEtian.y >= tableHeight || smEtian.y <= 0) {
+
+    // Verificam limita de sus
+    if (smEtian.y <= smEtian.ray) {
+        smEtian.directionY *= -1;
+    }
+
+    // Verificam coliziunea cu paleta in aceeasi instructiune
+    if (smEtian.y >= paddleEtian.y - smEtian.ray &&
+        smEtian.y <= paddleEtian.y + paddleEtian.height &&
+        smEtian.x >= paddleEtian.x - smEtian.ray &&
+        smEtian.x <= paddleEtian.x + paddleEtian.width + smEtian.ray) {
         smEtian.directionY *= -1;
     }
     smEtian.y += smEtian.directionY * smEtian.speedY;
