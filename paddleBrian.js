@@ -1,9 +1,9 @@
 const paddleBrian = {
-    x: 100,
-    y: 200,
+    x: 500,
+    y: 300,
     color: "red",
-    width: 50,
-    height: 50,
+    width: 70,
+    height: 40,
 }
 
 function createPaddleBrian() {
