@@ -8,5 +8,5 @@ const paddleBrian = {
 
 function createPaddleBrian() {
     fill(paddleBrian.color);
-    rect(mouseX, paddleBrian.y, paddleBrian.width, paddleBrian.height);
+    rect(mouseX, mouseY, paddleBrian.width, paddleBrian.height);
 }
