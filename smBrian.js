@@ -15,7 +15,7 @@ function checkLimitsBrian() {
     }
     smBrian.x += smBrian.directionX * smBrian.speedX;
 
-    // Verificam limitele de sus
+    // Verificam limita de sus
     if (smBrian.y <= smBrian.ray) {
         smBrian.directionY *= -1;
     }
