@@ -1,6 +1,6 @@
 const paddleGiulia = {
     x: 900,
-    y: 350,
+    y: 550,
     color: "blue",
     width: 80,
     height: 20,
