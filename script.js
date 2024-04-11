@@ -16,4 +16,6 @@ function draw() {
     createPaddleBrian();
     createPaddleGiulia();
     createPaddleEtian();
+    initBricksBrian();
+    createBricksBrian();
 }
