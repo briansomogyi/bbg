@@ -15,4 +15,5 @@ function draw() {
     smileyFaceGiulia(smGiulia.x, smGiulia.y, smGiulia.ray);
     createPaddleBrian();
     createPaddleGiulia();
+    createPaddleEtian();
 }
