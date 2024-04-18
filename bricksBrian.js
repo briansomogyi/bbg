@@ -38,7 +38,21 @@ function initBricksBrian() {
 
 function createBricksBrian() {
     bricksBrian.forEach(brick => {
-        fill(brick.color);
-        rect(brick.x, brick.y, brick.width, brick.height);
+        if (!brick.hit) {
+            fill(brick.color);
+            rect(brick.x, brick.y, brick.width, brick.height);
+        }
+    });
+}
+
+function checkCollisionBricksBrian() {
+    bricksBrian.forEach(brick=>{
+        if (!brick.hit &&
+            smBrian.y >= brick.y - smBrian.ray &&
+            smBrian.y <= brick.y + brick.height &&
+            smBrian.x >= brick.x - smBrian.ray &&
+            smBrian.x <= brick.x + brick.width + smBrian.ray) {
+            
+        }
     });
 }
