@@ -1,6 +1,6 @@
 const paddleEtian = {
     x: 100,
-    y: 500,
+    y: 590,
     color: "orange",
     width: 120,
     height: 80,
