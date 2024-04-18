@@ -1,5 +1,5 @@
-let tableWidth = 1250;
-let tableHeight = 650;
+const tableWidth = 1250;
+const tableHeight = 650;
 
 function setup() {
     createCanvas(tableWidth, tableHeight);

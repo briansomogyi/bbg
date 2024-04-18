@@ -1,25 +1,43 @@
-const bricks = []
+const bricksBrian = []
 
-const bricksRows = 1
-const bricksCols = 1
-const rowBricksNumber = 4
+const marginBrian = 10;
+const distanceBetweenBricksBrian = 10;
+
+const bricksRowsBrian = 3;
+const rowBricksNumberBrian = 7;
+
+const brickWidthBrian = Math.floor(
+    (Math.floor(tableWidth / 3) -
+        2 * marginBrian -
+        (rowBricksNumberBrian - 1) * distanceBetweenBricksBrian) /
+    rowBricksNumberBrian
+);
 
 function initBricksBrian() {
-    for (let index = 0; index < bricksRows * rowBricksNumber; index++) {
-        bricks.push({
+    let x = Math.floor(tableWidth / 3) + marginBrian;
+    for (let index = 0; index < bricksRowsBrian * rowBricksNumberBrian; index++) {
+        const row = Math.floor(index / rowBricksNumberBrian) + 1;
+
+        x += brickWidthBrian + distanceBetweenBricksBrian;
+        if (index % rowBricksNumberBrian == 0) {
+            x = Math.floor(tableWidth / 3) + marginBrian;
+        }
+
+        bricksBrian.push({
             hit: false,
-            x: index * 70,
-            y: 15,
+            x,
+            y: row * 25,
             color: "blue",
-            width: 50,
+            width: brickWidthBrian,
             height: 20,
+            row,
         })
 
     }
 }
 
 function createBricksBrian() {
-    bricks.forEach(brick => {
+    bricksBrian.forEach(brick => {
         fill(brick.color);
         rect(brick.x, brick.y, brick.width, brick.height);
     });
