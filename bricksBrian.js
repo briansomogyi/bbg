@@ -46,13 +46,13 @@ function createBricksBrian() {
 }
 
 function checkCollisionBricksBrian() {
-    bricksBrian.forEach(brick=>{
+    bricksBrian.forEach(brick => {
         if (!brick.hit &&
             smBrian.y >= brick.y - smBrian.ray &&
             smBrian.y <= brick.y + brick.height &&
             smBrian.x >= brick.x - smBrian.ray &&
             smBrian.x <= brick.x + brick.width + smBrian.ray) {
-            
+            brick.hit = false;
         }
     });
 }
