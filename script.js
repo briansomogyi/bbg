@@ -18,4 +18,6 @@ function draw() {
     createPaddleEtian();
     initBricksBrian();
     createBricksBrian();
+    initBricksEtian();
+    createBricksEtian();
 }
